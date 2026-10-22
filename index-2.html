@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reprog30 &amp; Noxaris Sécurité – Blauzac (Gard)</title>
+<meta name="description" content="Reprogrammation, clim et serrurerie auto avec Reprog30. Escorte et sécurité d’événements avec Noxaris Sécurité. Basés à Blauzac (30).">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛣️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light dark;
+    --asphalte: #26292D;
+    --ambre: #F2A900;
+    --nuit: #101C36;
+    --signal: #8DB8FF;
+    --craie: #F3F4F1;
+    --bande: #E9E7DF;
+    --texte-bande: #26292D;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bande: #1A1C1F; --texte-bande: #E9E7DF; }
+  }
+  *, *::before, *::after { box-sizing: inherit; margin: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bande);
+    color: var(--texte-bande);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  header {
+    padding: 1.1rem 1.25rem;
+    text-align: center;
+  }
+  header h1 {
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.4rem, 5vw, 2rem);
+    line-height: 1.1;
+  }
+  header p { font-size: .95rem; opacity: .8; margin-top: .25rem; }
+
+  main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 760px) {
+    main { grid-template-columns: 1fr 1fr; }
+  }
+
+  .porte {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: .9rem;
+    min-height: 42vh;
+    padding: 2rem 1.5rem 2.25rem;
+    text-decoration: none;
+    color: var(--craie);
+    overflow: hidden;
+  }
+  .porte.reprog { background: var(--asphalte); }
+  .porte.noxaris { background: var(--nuit); }
+
+  /* Le marquage au sol : l’élément fort de la page */
+  .porte::before {
+    content: "";
+    position: absolute;
+    left: 1.5rem; right: 1.5rem; top: 1.5rem;
+    height: 10px;
+    background: repeating-linear-gradient(90deg, var(--accent) 0 38px, transparent 38px 62px);
+    transition: transform .5s ease;
+  }
+  .reprog { --accent: var(--ambre); }
+  .noxaris { --accent: var(--signal); }
+  .porte:hover::before, .porte:focus-visible::before { transform: translateX(24px); }
+  @media (prefers-reduced-motion: reduce) {
+    .porte::before { transition: none; }
+  }
+
+  .porte h2 {
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.6rem, 11vw, 4.5rem);
+    line-height: .95;
+    color: var(--accent);
+  }
+  .porte p { max-width: 34ch; line-height: 1.5; font-size: 1.05rem; }
+  .bouton {
+    align-self: flex-start;
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    background: var(--accent);
+    color: var(--asphalte);
+    padding: .65rem 1.2rem;
+    border-radius: 4px;
+  }
+  .porte:focus-visible { outline: 4px solid var(--accent); outline-offset: -8px; }
+
+  .commun {
+    padding: 1.25rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .commun strong { font-weight: 500; }
+
+  footer {
+    padding: 1rem 1.25rem 1.5rem;
+    text-align: center;
+    font-size: .8rem;
+    opacity: .7;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Reprog30 &amp; Noxaris Sécurité</h1>
+  <p>Deux activités, un seul interlocuteur à Blauzac (Gard)</p>
+</header>
+
+<main>
+  <a class="porte reprog" href="https://www.reprog30.com/">
+    <h2>Reprog30</h2>
+    <p>Reprogrammation moteur, recharge de clim et serrurerie automobile.</p>
+    <span class="bouton">Voir Reprog30</span>
+  </a>
+
+  <a class="porte noxaris" href="https://noxarissecurite.vercel.app/">
+    <h2>Noxaris Sécurité</h2>
+    <p>Escorte, sécurité médicale et gestion de la circulation pour vos événements.</p>
+    <span class="bouton">Voir Noxaris Sécurité</span>
+  </a>
+</main>
+
+<p class="commun">Proposé par les deux : <strong>transport de véhicule non accidenté</strong>.</p>
+
+<footer>
+  Micro-entreprise Noxaris Sécurité (activité secondaire : Reprog30)<br>
+  SIRET 939 634 994 00023 – Blauzac (30)
+</footer>
+
+</body>
+</html>
